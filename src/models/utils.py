@@ -13,6 +13,6 @@ def prepare_dataset():
     return loan_df
 
 
-def train_test_split(df):
-    train, test = train_test_split(df, test_size=0.2)
+def train_test_split(df, test_size):
+    train, test = train_test_split(df, test_size)
     return train, test
