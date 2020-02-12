@@ -5,21 +5,17 @@ import numpy as np
 class RawColumns(NamedTuple):
     LOAN_NUMBER: str = "LoanNumber"
     NEW_CREDIT_CUSTOMER: str = "NewCreditCustomer"
-    LOAN_APPLICATION_STARTED_DATE: str = "LoanApplicationStartedDate"
     APPLICATION_SIGNED_HOUR: str = "ApplicationSignedHour"
     APPLICATION_SIGNED_WEEKDAY: str = "ApplicationSignedWeekday"
     VERIFICATION_TYPE: str = "VerificationType"
     LANGUAGE_CODE: str = "LanguageCode"
     AGE: str = "Age"
-    DATE_OF_BIRTH: str = "DateOfBirth"
     GENDER: str = "Gender"
     APPLIED_AMOUNT: str = "AppliedAmount"
     AMOUNT: str = "Amount"
     INTEREST: str = "Interest"
     LOAN_DURATION: str = "LoanDuration"
     MONTHLY_PAYMENT: str = "MonthlyPayment"
-    COUNTY: str = "County"
-    CITY: str = "City"
     USE_OF_LOAN: str = "UseOfLoan"
     EDUCATION: str = "Education"
     MARITAL_STATUS: str = "MaritalStatus"
@@ -50,7 +46,10 @@ class RawColumns(NamedTuple):
     PREVIOUS_REPAYMENTS_BEFORE_LOAN: str = "PreviousRepaymentsBeforeLoan"
     PREVIOUS_EARLY_REPAYMENTS_BEFOLE_LOAN: str = "PreviousEarlyRepaymentsBefoleLoan"
     PREVIOUS_EARLY_REPAYMENTS_COUNT_BEFORE_LOAN: str = "PreviousEarlyRepaymentsCountBeforeLoan"
-
+    COUNTY: str = "County"
+    CITY: str = "City"
+    LOAN_APPLICATION_STARTED_DATE: str = "LoanApplicationStartedDate"
+    DATE_OF_BIRTH: str = "DateOfBirth"
 
 COLUMNS = RawColumns()
 
@@ -65,6 +64,10 @@ class ExcludeColsFromTraining(NamedTuple):
     INCOME_OTHER: str = "IncomeOther"
     GENDER: str = "Gender"
     MARITAL_STATUS: str = "MaritalStatus"
+    COUNTY: str = "County"
+    CITY: str = "City"
+    LOAN_APPLICATION_STARTED_DATE: str = "LoanApplicationStartedDate"
+    DATE_OF_BIRTH: str = "DateOfBirth"
 
 
 EXCLUDE_COLUMNS = ExcludeColsFromTraining()

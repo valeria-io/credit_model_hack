@@ -14,9 +14,9 @@ def prepare_dataset():
     return loan_df
 
 
-def train_test_split(df, test_size):
-    train, test = train_test_split(df, test_size)
-    return train, test
+def XY_train_test_split(X: pd.DataFrame, y: pd.Series, test_size):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    return X_train, X_test, y_train, y_test
 
 
 def category_to_numerical(df):
