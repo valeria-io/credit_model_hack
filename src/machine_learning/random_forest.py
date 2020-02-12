@@ -29,8 +29,8 @@ def random_forest_model():
 
 def feature_importance(rf, x_train):
     df = pd.DataFrame(
-        rf.coef[0], index=x_train.columns, columns=["coef_values"]
-    ).sort_values("coef_values", ascending=False)
+        rf.feature_importances_, index=x_train.columns,
+        columns=["importance"]).sort_values("importance", ascending=False)
     return df
 
 
