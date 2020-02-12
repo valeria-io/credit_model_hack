@@ -14,8 +14,8 @@ def build_logistic_model():
 
     # loaded_model = pickle.load(open(filename, 'rb'))
     # result = loaded_model.score(X_test, Y_test)
-    train_score = clf.socre(train_df, train_y)
-    test_score = clf.socre(test_df, test_df)
+    train_score = clf.score(train_df, train_y)
+    test_score = clf.score(test_df, test_df)
 
     print('training accuracy...')
     print(train_score)
